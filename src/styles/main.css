@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import '../styles/global.css';
+
+.page-content h1 {
+    @apply text-3xl font-bold mb-2;
+}
+
+.page-content h2 {
+    @apply text-2xl font-bold mb-2;
+}
+
+.page-content h3 {
+    @apply text-xl font-bold mb-2;
+}
+
+.page-content p {
+    @apply text-base pb-2;
+}

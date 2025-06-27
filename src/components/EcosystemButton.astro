@@ -1,0 +1,6 @@
+---
+const { class: className, ...rest } = Astro.props
+---
+<a href={Astro.props.href} class:list={["flex hover:bg-black hover:text-white items-center justify-center p-4 text-center bg-white border-black border-2", className]} {...rest}>
+  <slot />
+</a>
