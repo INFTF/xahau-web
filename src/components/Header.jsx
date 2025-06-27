@@ -14,11 +14,9 @@ import {
 } from '@headlessui/react'
 import { ChevronDownIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
 
-const communities = [
-  { name: 'X', href: 'https://x.com/IncFinTech' },
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/incfintech/' },
-  { name: 'YouTube', href: 'https://www.youtube.com/@InFTF' },
-  { name: 'GitHub', href: 'https://github.com/INFTF' },
+const socials = [
+  { name: 'X', href: 'https://x.com/XahauNetwork' },
+  { name: 'GitHub', href: 'https://github.com/Xahau' },
 ]
 
 export default function Header(props) {
@@ -50,12 +48,12 @@ export default function Header(props) {
           <a href="/docs" className={`selected:no-underline no-underline text-base text-black ${props.url.pathname.slice(1).split('/')[0] == 'docs' ? 'font-bold' : 'font-regular'}`}>Documentation</a>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-base font-regular text-black bg-transparent">
-              Community
+              Connect
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-black" />
             </PopoverButton>
             <PopoverPanel transition className="absolute left-1/2 z-10 mt-3 w-auto max-w-md -translate-x-1/2 overflow-hidden bg-xahau-gray shadow-lg ring-1 ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
               <div className="p-4">
-                {communities.map((item) => (
+                {socials.map((item) => (
                   <div key={item.name} className="group relative flex items-center gap-x-6 p-2 text-sm/6">
                       <a href={item.href} target="_blank" className="no-underline block font-regular text-white">{item.name}</a>
                   </div>
@@ -95,11 +93,11 @@ export default function Header(props) {
                 <a href="/docs" className={`selected:no-underline no-underline -mx-3 block rounded-lg px-3 py-2 text-base/7 text-base/7 hover:bg-gray-50 text-black ${props.url.pathname.slice(1).split('/')[0] == 'docs' ? 'font-bold' : 'font-regular'}`}>Documentation</a>
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="bg-transparent group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-black hover:bg-gray-50">
-                    Community
+                    Connect
                     <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...communities].map((item) => (
+                    {[...socials].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
