@@ -67,7 +67,6 @@ If a Transaction Type does not appear in the table then it has no TSHes **other 
 
 | Transaction Type	       | TSH Type	     | Who is the TSH                                                                               |
 | ----------------------- | ------------- | -------------------------------------------------------------------------------------------- |
-| AccountDelete           | Strong        | Destination account funds are paid out to after deletion                                     |
 | AccountSet              | None          | N/A                                                                                          |
 | CheckCancel             | Weak          | Destination account                                                                          |
 | CheckCash               | None          | N/A                                                                                          |
@@ -102,13 +101,6 @@ If a Transaction Type does not appear in the table then it has no TSHes **other 
 | OTXN    | TSH     | AccountSet |
 | ------- | ------- | ---------- |
 | Account | Account | Strong     |
-
-**AccountDelete**
-
-| OTXN    | TSH         | AccountDelete |
-| ------- | ----------- | ------------- |
-| Account | Account     | None          |
-| Account | Beneficiary | Strong        |
 
 **Check**
 
